@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 30px 30px;
+            margin-right: 500px;
+        }
+        
+        .navbar {
+            overflow: hidden;
+            background-color: #1f2327;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 30px 45px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 30px 45px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            position: relative;
+            font-weight: bold;
+        }
+
+        .dropbtn::before,
+        .dropbtn::after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 1px; 
+            background-color: yellow; 
+            top: 0;
+        }
+
+        .dropbtn::before {
+            left: 0;
+        }
+
+        .dropbtn::after {
+            right: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: 0e1012;
+        }
+
+        .dropdown-one {
+            cursor: pointer;
+            display: block;
+            position: absolute;
+            background-color: rgb(39, 88, 153);
+            min-width: 160px;
+        }
+
+        .dropdown-two {
+            cursor: pointer;
+            display: block;
+            position: absolute;
+            left: 100%; 
+            top: 155px; 
+            min-width: 160px;
+
+        }
+
+        .dropdown-two .dItem {
+            color: white;
+            padding: 30px 46px;
+            display: block;
+            text-align: center;
+            background-color: rgb(116, 13, 116);
+        }
+
+
+        .dropdown:hover .dropdown-one,
+        .dropdown:hover .dropdown-two {
+            display: block;
+        }
+
+        .dropdown-one .dItem,
+        .dropdown-two .dItem {
+            color: white;
+            padding: 30px 46px;
+            display: block;
+            text-align: center;
+        }
+
+        
+
+    </style>
+</head>
+<body style="background-color: orangered;">
+    <div class="navbar">
+        <a href="#home">HOME</a>
+        <div class="dropdown">
+            <div class="dropbtn">TUTORIALS<i class="fa-caret-down"></i></div>
+            <div class="dropdown-one">
+                <div class="dItem" href="#">Photoshop</div>
+                <div class="dItem" href="#">Illustrator</div>
+                <div id="link1" class="dItem" style="background-color: rgb(94, 137, 165);"href="#">Web Design
+                    <div class="dropdown-two">
+                        <div class="dItem" id="file" href="#">HTML</div>
+                        <div class="dItem" id="file" href="#">CSS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#home">ARTICLES</a>
+        <a href="#home">INSPIRATION</a>
+    </div>
+</body>
+</html>
